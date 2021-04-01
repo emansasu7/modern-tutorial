@@ -1,12 +1,58 @@
-$promary-color: #444;
+@import "config";
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 body {
+  @include background();
   background-color: $promary-color;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   height: 100%;
   color: #fff;
+  line-height: 1.5;
+}
+
+header {
+  display: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#home {
+  // background-color: bisque;
+  height: 100%;
+  padding: 60px;
+  margin-top: 10vh;
+  overflow: hidden;
+}
+// Headings
+h1 {
+  font-size: 60px;
+}
+.span-style {
+  color: $secondary-color;
+}
+.sub-heading {
+  font-size: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: rgba(lighten($promary-color, 2), 0.5);
+}
+
+.icons {
+  // background-color: aqua;
+  margin-top: 20px;
+  a {
+    padding: 10px;
+    &:hover {
+      color: $secondary-color;
+      @include ease-out();
+    }
+  }
 }
