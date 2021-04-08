@@ -1,4 +1,6 @@
 @import "config";
+@import "menu";
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -28,7 +30,7 @@ a {
   // background-color: bisque;
   height: 100%;
   padding: 60px;
-  margin-top: 10vh;
+  margin-top: 20vh;
   overflow: hidden;
 }
 // Headings
