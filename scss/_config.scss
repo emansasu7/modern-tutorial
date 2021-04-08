@@ -30,3 +30,10 @@ $bg-opacity: 0.5;
     }
   }
 }
+
+// Responsive Mixin
+@mixin responsive($x) {
+  @media screen and(max-width:$x) {
+    @content;
+  }
+}

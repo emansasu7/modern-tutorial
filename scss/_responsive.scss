@@ -1,0 +1,36 @@
+// tablet
+
+// mobile l
+@include responsive(425px) {
+  .menu-branding,
+  .menu-nav {
+    float: none;
+    width: 100%;
+    // min-height: 0;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0);
+
+    .portrait-img {
+      width: 100px;
+      height: 100px;
+      //   background-position: center;
+    }
+  }
+
+  #home {
+    line-height: 1.2;
+    text-align: center;
+    align-items: center;
+  }
+}
