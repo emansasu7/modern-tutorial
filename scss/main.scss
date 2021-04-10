@@ -1,6 +1,5 @@
 @import "config";
 @import "menu";
-@import "responsive";
 
 * {
   box-sizing: border-box;
@@ -27,24 +26,28 @@ a {
   text-decoration: none;
 }
 
-#home {
-  // background-color: bisque;
-  height: 100%;
+main {
   padding: 60px;
-  margin-top: 20vh;
+  margin-top: 15vh;
+  min-height: calc(100vh-60px);
   overflow: hidden;
 }
 // Headings
 h1 {
   font-size: 60px;
 }
-.span-style {
+.span-style,
+.text-secondary {
   color: $secondary-color;
+}
+
+.text-secondary {
+  text-transform: uppercase;
 }
 .sub-heading {
   font-size: 20px;
   margin-bottom: 20px;
-  padding: 10px;
+  padding: 5px;
   background: rgba(lighten($promary-color, 2), 0.5);
 }
 
@@ -59,3 +62,57 @@ h1 {
     }
   }
 }
+
+.about-info {
+  display: grid;
+  grid-template-areas:
+    "bioimg bio bio"
+    "j1 j2 j3";
+  grid-template-columns: repeat (3, 1fr);
+  grid-gap: 30px;
+  // margin-top: 1px;
+  .bio-img {
+    border: 3px solid $secondary-color;
+    border-radius: 50%;
+    grid-area: bioimg;
+    margin: auto;
+    height: 250px;
+    width: 250px;
+  }
+
+  .bio {
+    grid-area: bio;
+    margin: auto;
+  }
+
+  .job {
+    background-color: lighten($promary-color, 5%);
+    padding: 20px;
+    border-bottom: 3px solid $secondary-color;
+    // max-width: 300px;
+    // height: 300px;
+    h3,
+    h6,
+    p {
+      margin-bottom: 20px;
+    }
+    .job-1 {
+      grid-area: j1;
+    }
+    .job-2 {
+      grid-area: j2;
+    }
+    .job-3 {
+      grid-area: j3;
+    }
+  }
+}
+
+.main-footer {
+  background-color: darken($promary-color, 10);
+  color: #fff;
+  max-height: 60px;
+  padding: 1rem;
+  text-align: center;
+}
+@import "responsive";

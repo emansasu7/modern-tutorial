@@ -1,5 +1,15 @@
 // tablet
-
+@include responsive(768px) {
+  .about-info {
+    grid-template-areas:
+      "bioimg"
+      "bio"
+      "j1"
+      "j2"
+      "j3";
+    grid-template-columns: 1fr;
+  }
+}
 // mobile l
 @include responsive(425px) {
   .menu-branding,
@@ -24,7 +34,6 @@
     .portrait-img {
       width: 100px;
       height: 100px;
-      //   background-position: center;
     }
   }
 
