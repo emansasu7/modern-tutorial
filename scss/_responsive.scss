@@ -9,6 +9,10 @@
       "j3";
     grid-template-columns: 1fr;
   }
+
+  .work-projects {
+    width: 100%;
+  }
 }
 // mobile l
 @include responsive(425px) {
